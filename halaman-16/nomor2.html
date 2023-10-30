@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALAMAN 8 - NO2</title>
+</head>
+<style>
+    body {
+        background-color: #dddddd;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        background-color: #333;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .form-group {
+        margin: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        background-color: #ffffff;
+        margin: 20px;
+        padding: 20px;
+        height: 700px;
+    }
+
+    input {
+        width: 150px;
+    }
+
+    footer {
+        background-color: #333;
+        color: #ffffff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        cursor: pointer;
+        margin: 10px;
+    }
+    
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>APLIKASI PENGUBAH ANGKA MENJADI GRADE HURUF</h1>
+    </header>
+
+    <div class="container">
+        <div class="form-group">
+            <div class="box" ondblclick="changeColor(this)"></div>
+            <div class="box" ondblclick="changeColor(this)"></div>
+            <div class="box" ondblclick="changeColor(this)"></div>
+            <div class="box" ondblclick="changeColor(this)"></div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2023 Tugas 5 - Dimas Aryasatya
+    </footer>
+
+    <script>
+        function changeColor(element) {
+            if(element.style.backgroundColor == 'yellow'){
+                element.style.backgroundColor = 'red';
+            } else {
+                element.style.backgroundColor = 'yellow';
+            }
+        }
+    </script>
+</body>
+
+</html>

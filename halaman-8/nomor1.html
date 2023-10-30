@@ -1,0 +1,117 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALAMAN 8 - NO2</title>
+</head>
+<style>
+        body {
+            background-color: #dddddd;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        h2{
+            text-align: center;
+        }
+        
+        .form-group{
+            margin: 20px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            height: 700px;
+        }
+
+        input{
+            width: 150px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>APLIKASI PENGUBAH ANGKA MENJADI GRADE HURUF</h1>
+    </header>
+
+    <div class="container">
+        <div class="form-group" style="width: 200px; margin: auto; border: 1px solid black;">
+            <p>Peraturan: </p>
+            <ul>
+                <li>0-40 =E</li>
+                <li>41-55=D</li>
+                <li>56-60=C</li>
+                <li>61-65=BC</li>
+                <li>66-70=B</li>
+                <li>71-80=AB</li>
+                <li>81-100=A</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <h2>CONVERT</h2>
+            <label for="">Masukkan Nilai: </label>
+            <input type="number" min="0" max="100" id="nilai">
+            <button type="button" id="convert">Convert Now</button>
+        </div>
+        <div class="form-group">
+            <h2>HASIL</h2>
+            <h4 id="hasil"></h4>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2023 Tugas 5 - Dimas Aryasatya
+    </footer>
+
+    <script>
+        document.getElementById('convert').addEventListener('click', function () {
+            const nilaiInput = parseInt(document.getElementById('nilai').value);
+            let hasilKonversi = '';
+
+            if (nilaiInput >= 0 && nilaiInput <= 40) {
+                hasilKonversi = 'E';
+            } else if (nilaiInput >= 41 && nilaiInput <= 55) {
+                hasilKonversi = 'D';
+            } else if (nilaiInput >= 56 && nilaiInput <= 60) {
+                hasilKonversi = 'C';
+            } else if (nilaiInput >= 61 && nilaiInput <= 65) {
+                hasilKonversi = 'BC';
+            } else if (nilaiInput >= 66 && nilaiInput <= 70) {
+                hasilKonversi = 'B';
+            } else if (nilaiInput >= 71 && nilaiInput <= 80) {
+                hasilKonversi = 'AB';
+            } else if (nilaiInput >= 81) {
+                hasilKonversi = 'A';
+            } else {
+                alert("Angka Tidak Boleh Negatif");
+                document.getElementById('nilai').value = 0
+            }
+
+            document.getElementById('hasil').textContent = `Hasil Konversi: ${hasilKonversi}`;
+        });
+    </script>
+</body>
+</html>

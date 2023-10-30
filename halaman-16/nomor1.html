@@ -1,0 +1,135 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALAMAN 8 - NO2</title>
+</head>
+<style>
+        body {
+            background-color: #dddddd;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        h2{
+            text-align: center;
+        }
+        
+        .form-group{
+            margin: 30px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            height: 1000px;
+        }
+
+        input{
+            width: 150px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        img{
+            width: 300px;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>APLIKASI MENAMPILKAN DAN MENYEMBUMYIKAN FOTO</h1>
+    </header>
+
+    <div class="container">
+        <div class="form-group">
+            <img src="foto1.webp" alt="Foto1" id="foto1">
+            <br>
+            <button id="sembunyikan1">Sembunyikan</button>
+            <button id="tampilkan1">Perlihatkan</button>
+        </div>
+        <div class="form-group">
+            <img src="foto2.webp" alt="Foto2" id="foto2">
+            <br>
+            <button id="sembunyikan2">Sembunyikan</button>
+            <button id="tampilkan2">Perlihatkan</button>
+        </div>
+        <div class="form-group">
+            <img src="foto3.webp" alt="Foto3" id="foto3">
+            <br>
+            <button id="sembunyikan3">Sembunyikan</button>
+            <button id="tampilkan3">Perlihatkan</button>
+        </div>
+        
+    </div>
+
+    <footer>
+        &copy; 2023 Tugas 5 - Dimas Aryasatya
+    </footer>
+
+    <script>
+        // Function to hide an image
+        function hideImage(imageId) {
+            const image = document.getElementById(imageId);
+            if (image) {
+                image.style.visibility = 'hidden';
+            }
+        }
+
+        // Function to show an image
+        function showImage(imageId) {
+            const image = document.getElementById(imageId);
+            if (image) {
+                image.style.visibility = 'visible';
+            }
+        }
+
+        // Add event listeners to the hide and show buttons
+        document.getElementById('sembunyikan1').addEventListener('click', function() {
+            hideImage('foto1');
+        });
+
+        document.getElementById('tampilkan1').addEventListener('click', function() {
+            showImage('foto1');
+        });
+
+        document.getElementById('sembunyikan2').addEventListener('click', function() {
+            hideImage('foto2');
+        });
+
+        document.getElementById('tampilkan2').addEventListener('click', function() {
+            showImage('foto2');
+        });
+
+        document.getElementById('sembunyikan3').addEventListener('click', function() {
+            hideImage('foto3');
+        });
+
+        document.getElementById('tampilkan3').addEventListener('click', function() {
+            showImage('foto3');
+        });
+    </script>
+</body>
+</html>

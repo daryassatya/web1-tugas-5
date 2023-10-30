@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALAMAN 8 - NO2</title>
+    <style>
+        body {
+            background-color: #dddddd;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin: 30px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            height: 1000px;
+        }
+
+        input {
+            width: 150px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+            background-color: yellow;
+            cursor: pointer;
+            margin: auto;
+            transition: opacity 0.3s; /* Add a CSS transition for opacity */
+            opacity: 0; /* Initially, set opacity to 0 for the fade-in effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>APLIKASI MENAMPILKAN DAN MENYEMBUMYIKAN FOTO</h1>
+    </header>
+    <div class="container">
+        <div class="form-group">
+            <div class="box"></div>
+            <br>
+            <button id="fadeIn">Fade In</button>
+            <button id="fadeOut">Fade Out</button>
+            <button id="fadeTo">Fade To</button>
+        </div>
+    </div>
+    <footer>
+        &copy; 2023 Tugas 5 - Dimas Aryasatya
+    </footer>
+    <script>
+        // Get the box element
+        const box = document.querySelector(".box");
+
+        // Function to fade in the box
+        function fadeIn() {
+            box.style.opacity = "1";
+        }
+
+        // Function to fade out the box
+        function fadeOut() {
+            box.style.opacity = "0";
+        }
+
+        // Function to fade to 0.3 opacity
+        function fadeTo() {
+            box.style.opacity = "0.3";
+        }
+
+        // Add event listeners to the buttons
+        document.getElementById("fadeIn").addEventListener("click", fadeIn);
+        document.getElementById("fadeOut").addEventListener("click", fadeOut);
+        document.getElementById("fadeTo").addEventListener("click", fadeTo);
+    </script>
+</body>
+</html>

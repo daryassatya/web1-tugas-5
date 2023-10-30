@@ -1,0 +1,1 @@
+*Note : untuk menjalankannya lebih mudah, izin untuk saya sarankan pak, menggunakan Extension LiverServer di VsCode
